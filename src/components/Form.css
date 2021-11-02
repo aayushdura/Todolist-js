@@ -1,0 +1,12 @@
+.addbar{
+    width:30ch;
+    border-radius: 1ch;
+    height:4ch;
+
+}
+.addbutton{
+    border-radius: 1ch;
+    background-color: #304653;
+    height:4ch;
+    color:antiquewhite;
+}

@@ -1,0 +1,30 @@
+.lists {
+  position: absolute;
+  margin-top: 7ch;
+  margin-left: 2ch;
+  align-content: center;
+}
+.Dbtns {
+  background-color: #d1463c;
+  color: antiquewhite;
+}
+.btns {
+  background-color: #56d4c9;
+  color: C;
+}
+input.compbtn {
+  height: 3ch;
+  width: 4ch;
+  position: absolute;
+  color: antiquewhite;
+}
+#box {
+  width: auto;
+  height: 3ch;
+  border-radius: 2ch;
+  background-color: #304653;
+  color: antiquewhite;
+}
+.liitem {
+  list-style: none;
+}
