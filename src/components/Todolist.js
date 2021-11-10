@@ -1,5 +1,5 @@
 import React from "react";
-import "./Todolists.css";
+import "./Todolist.css";
 
 const Todolist = (props) => {
   const { todos, setTodos, setEditTodos, setInput } = props;

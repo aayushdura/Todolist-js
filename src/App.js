@@ -1,34 +1,25 @@
-import React, { useState } from "react";
-import "./App.css";
-import Form from "./components/Form";
-import Header from "./components/Header.js";
-import Todolist from "./components/Todolist";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Todolists from "./pages/Todolists";
+import Infointake from "./components/Infointake";
+import { useState } from "react";
 
 const App = () => {
-  const [input, setInput] = useState("");
-  const [todos, setTodos] = useState([]);
-  const [editTodos, setEditTodos] = useState([]);
+  const [userInfo, setUserInfo] = useState({});
+  const handleSubmit = (info) => {
+    setUserInfo(info);
+  };
   return (
-    <div className="Appcontainer">
-      <Header />
-      <div className="Addbar">
-        <Form
-          input={input}
-          setInput={setInput}
-          todos={todos}
-          setTodos={setTodos}
-          editTodos={editTodos}
-          setEditTodos={setEditTodos}
-        />
-      </div>
-      <Todolist
-        input={input}
-        setInput={setInput}
-        todos={todos}
-        setTodos={setTodos}
-        editTodos={editTodos}
-        setEditTodos={setEditTodos}
-      />
+    <div>
+      <Router>
+        <Switch>
+          <Route path="/" exact>
+            <Infointake handleSubmit={handleSubmit} />
+          </Route>
+          <Route path="/List" exact>
+            <Todolists userInfo={userInfo} />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 };
